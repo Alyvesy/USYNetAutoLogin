@@ -1,0 +1,14 @@
+C:\D\Tech\C#\WinForm\USYNetAutoLogin\bin\Release\USYNetAutoLogin.exe.config
+C:\D\Tech\C#\WinForm\USYNetAutoLogin\bin\Release\USYNetAutoLogin.exe.manifest
+C:\D\Tech\C#\WinForm\USYNetAutoLogin\bin\Release\USYNetAutoLogin.application
+C:\D\Tech\C#\WinForm\USYNetAutoLogin\bin\Release\USYNetAutoLogin.exe
+C:\D\Tech\C#\WinForm\USYNetAutoLogin\bin\Release\USYNetAutoLogin.pdb
+C:\D\Tech\C#\WinForm\USYNetAutoLogin\obj\Release\USYNetAutoLogin.csproj.AssemblyReference.cache
+C:\D\Tech\C#\WinForm\USYNetAutoLogin\obj\Release\USYNetAutoLogin.Form1.resources
+C:\D\Tech\C#\WinForm\USYNetAutoLogin\obj\Release\USYNetAutoLogin.Properties.Resources.resources
+C:\D\Tech\C#\WinForm\USYNetAutoLogin\obj\Release\USYNetAutoLogin.csproj.GenerateResource.cache
+C:\D\Tech\C#\WinForm\USYNetAutoLogin\obj\Release\USYNetAutoLogin.csproj.CoreCompileInputs.cache
+C:\D\Tech\C#\WinForm\USYNetAutoLogin\obj\Release\USYNetAutoLogin.exe.manifest
+C:\D\Tech\C#\WinForm\USYNetAutoLogin\obj\Release\USYNetAutoLogin.application
+C:\D\Tech\C#\WinForm\USYNetAutoLogin\obj\Release\USYNetAutoLogin.exe
+C:\D\Tech\C#\WinForm\USYNetAutoLogin\obj\Release\USYNetAutoLogin.pdb
