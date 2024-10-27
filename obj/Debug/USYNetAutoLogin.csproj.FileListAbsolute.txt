@@ -12,3 +12,17 @@ C:\D\Tech\C#\WinForm\USYNetAutoLogin\bin\Debug\USYNetAutoLogin.exe.manifest
 C:\D\Tech\C#\WinForm\USYNetAutoLogin\bin\Debug\USYNetAutoLogin.application
 C:\D\Tech\C#\WinForm\USYNetAutoLogin\obj\Debug\USYNetAutoLogin.exe.manifest
 C:\D\Tech\C#\WinForm\USYNetAutoLogin\obj\Debug\USYNetAutoLogin.application
+D:\TECH\$_GitHub_$\GitAlyvesy\USYNetAutoLogin\bin\Debug\USYNetAutoLogin.exe.config
+D:\TECH\$_GitHub_$\GitAlyvesy\USYNetAutoLogin\bin\Debug\USYNetAutoLogin.exe.manifest
+D:\TECH\$_GitHub_$\GitAlyvesy\USYNetAutoLogin\bin\Debug\USYNetAutoLogin.application
+D:\TECH\$_GitHub_$\GitAlyvesy\USYNetAutoLogin\bin\Debug\USYNetAutoLogin.exe
+D:\TECH\$_GitHub_$\GitAlyvesy\USYNetAutoLogin\bin\Debug\USYNetAutoLogin.pdb
+D:\TECH\$_GitHub_$\GitAlyvesy\USYNetAutoLogin\obj\Debug\USYNetAutoLogin.csproj.AssemblyReference.cache
+D:\TECH\$_GitHub_$\GitAlyvesy\USYNetAutoLogin\obj\Debug\USYNetAutoLogin.Form1.resources
+D:\TECH\$_GitHub_$\GitAlyvesy\USYNetAutoLogin\obj\Debug\USYNetAutoLogin.Properties.Resources.resources
+D:\TECH\$_GitHub_$\GitAlyvesy\USYNetAutoLogin\obj\Debug\USYNetAutoLogin.csproj.GenerateResource.cache
+D:\TECH\$_GitHub_$\GitAlyvesy\USYNetAutoLogin\obj\Debug\USYNetAutoLogin.csproj.CoreCompileInputs.cache
+D:\TECH\$_GitHub_$\GitAlyvesy\USYNetAutoLogin\obj\Debug\USYNetAutoLogin.exe.manifest
+D:\TECH\$_GitHub_$\GitAlyvesy\USYNetAutoLogin\obj\Debug\USYNetAutoLogin.application
+D:\TECH\$_GitHub_$\GitAlyvesy\USYNetAutoLogin\obj\Debug\USYNetAutoLogin.exe
+D:\TECH\$_GitHub_$\GitAlyvesy\USYNetAutoLogin\obj\Debug\USYNetAutoLogin.pdb
