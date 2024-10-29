@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,18 +18,41 @@ namespace USYNetAutoLogin
         private readonly Icon icon_disconnected = new Icon("icon_disconnected.ico");
         private DateTime lastLoginAttempt = DateTime.MinValue;
         private bool wasDisconnected = false; // 状态-是否处于断网
+        private int checkInterval = 2000;  // 默认设置检测间隔 2 秒
 
         public Form1()
         {
             InitializeComponent();
+            LoadConfig();
             SetupTrayIcon();
 
             httpClient = new HttpClient();
 
             timer = new Timer();
-            timer.Interval = 2000; // 2秒检测一次
+            timer.Interval = checkInterval;
             timer.Tick += CheckInternetConnection;
             timer.Start();
+
+        }
+         
+        private void LoadConfig()
+        {
+            try
+            {
+                var configLines = File.ReadAllLines("config.txt");
+                foreach (var line in configLines)
+                {
+                    if (line.StartsWith("时间间隔="))
+                    {
+                        var value = line.Split('=')[1];
+                        checkInterval = int.Parse(value);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Error loading config: {ex.Message}");
+            }
         }
 
         private void SetupTrayIcon()
@@ -39,12 +63,19 @@ namespace USYNetAutoLogin
             notifyIcon.Text = "USY校园网自动登录插件";
 
             var contextMenu = new ContextMenuStrip();
+
+            var intervalDisplay = new ToolStripMenuItem("当前检测间隔：" + checkInterval.ToString() + "ms");
+            contextMenu.Items.Add(intervalDisplay);
+
+            var aboutItem = new ToolStripMenuItem("关于更多");
+            aboutItem.Click += (s, e) => { OpenAbout(); };
+            contextMenu.Items.Add(aboutItem);
+
             var exitItem = new ToolStripMenuItem("退出");
             exitItem.Click += (s, e) => { ExitApp(); };
             contextMenu.Items.Add(exitItem);
 
-            var statusItem = new ToolStripMenuItem("检测连接状态");
-            contextMenu.Items.Add(statusItem);
+            
 
             notifyIcon.ContextMenuStrip = contextMenu;
         }
@@ -53,6 +84,17 @@ namespace USYNetAutoLogin
         {
             notifyIcon.Visible = false;
             Application.Exit();
+        }
+
+        private void OpenAbout()
+        {
+            ProcessStartInfo psiAbout = new ProcessStartInfo
+            {
+                FileName = "https://github.com/Alyvesy/USYNetAutoLogin",
+                UseShellExecute = true,
+            };
+
+            Process.Start(psiAbout);
         }
 
         private async void CheckInternetConnection(object sender, EventArgs e)
@@ -75,6 +117,7 @@ namespace USYNetAutoLogin
                 {
                     // 忽略异常，继续检测其他网站
                 }
+                await Task.Delay(300);  // 防止网络波动，所以网站通讯检测间隔0.3秒
             }
 
             // 更新托盘图标
@@ -103,7 +146,7 @@ namespace USYNetAutoLogin
             {
                 ProcessStartInfo psi = new ProcessStartInfo
                 {
-                    FileName = "http://123.123.123.123",
+                    FileName = "http://10.10.200.102/",  // 校园网登录网址
                     UseShellExecute = true,
                     WindowStyle = ProcessWindowStyle.Hidden
                 };
